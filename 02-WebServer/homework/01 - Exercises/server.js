@@ -7,6 +7,7 @@ const PORT = 3001;
 const server = http
   .createServer((req, res) => {
     console.log(`Server raised in port ${PORT}`);
+    
     switch (req.url) {
       case "/api":
         fs.readFile("./utils/dogsData.json", (err, data) => {
